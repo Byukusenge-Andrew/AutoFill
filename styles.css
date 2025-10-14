@@ -1,0 +1,90 @@
+.toggle-checkbox:checked {
+    right: 0;
+    border-color: #68D391;
+}
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #68D391;
+}
+.custom-field-row:hover .remove-field {
+    opacity: 1;
+}
+.remove-field {
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.tab-button.active {
+    border-bottom: 2px solid #4299e1;
+    color: #4299e1;
+}
+.field-category {
+    transition: max-height 0.3s ease-out;
+    max-height: 1000px;
+    overflow: hidden;
+}
+.field-category.collapsed {
+    max-height: 40px;
+}
+
+/* Enhanced Tailwind padding utilities */
+@layer components {
+  /* Enhanced padding utilities for better spacing */
+  .container-padding {
+    @apply px-6 py-8;
+  }
+  
+  .section-padding {
+    @apply py-8 px-6;
+  }
+  
+  .section-padding-sm {
+    @apply py-4 px-4;
+  }
+  
+  .section-padding-lg {
+    @apply py-12 px-8;
+  }
+  
+  .card-padding {
+    @apply p-6;
+  }
+  
+  .card-padding-sm {
+    @apply p-4;
+  }
+  
+  .card-padding-lg {
+    @apply p-8;
+  }
+  
+  /* Enhanced responsive padding */
+  .responsive-padding {
+    @apply px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 xl:px-12 xl:py-20;
+  }
+  
+  .responsive-padding-sm {
+    @apply px-3 py-6 sm:px-4 sm:py-8 lg:px-6 lg:py-10 xl:px-8 xl:py-12;
+  }
+  
+  .responsive-padding-lg {
+    @apply px-6 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20 xl:px-16 xl:py-24;
+  }
+
+  /* Blue fill utility */
+  .fill-blue {
+    @apply bg-blue-500 text-white;
+  }
+  
+  .fill-blue-light {
+    @apply bg-blue-100 text-blue-900;
+  }
+  
+  .fill-blue-dark {
+    @apply bg-blue-800 text-white;
+  }
+} 

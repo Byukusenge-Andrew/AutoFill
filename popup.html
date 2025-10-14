@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFill Dummy Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Header with logo and title -->
+        <div class="bg-blue-600 text-white p-4 flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            </svg>
+            <h1 class="text-xl font-bold">AutoFill Dummy Data</h1>
+        </div>
+        
+        <!-- Tab navigation -->
+        <div class="flex border-b">
+            <button class="tab-button active flex-1 py-3 px-4 text-center font-medium focus:outline-none" data-tab="fields-tab">
+                Fields
+            </button>
+            <button class="tab-button flex-1 py-3 px-4 text-center font-medium focus:outline-none" data-tab="custom-tab">
+                Custom
+            </button>
+            <button class="tab-button flex-1 py-3 px-4 text-center font-medium focus:outline-none" data-tab="settings-tab">
+                Settings
+            </button>
+        </div>
+        
+        <!-- Tab content -->
+        <div class="p-4">
+            <!-- Fields Tab -->
+            <div class="tab-content active" id="fields-tab">
+                <!-- Personal Information -->
+                <div class="field-category mb-4">
+                    <div class="flex justify-between items-center mb-2 cursor-pointer category-header">
+                        <h2 class="text-md font-medium text-gray-700">Personal Information</h2>
+                        <svg class="w-5 h-5 transform rotate-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="category-content grid grid-cols-2 gap-2">
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="name" class="mr-2 h-4 w-4"> 
+                            <span>Name</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="email" class="mr-2 h-4 w-4"> 
+                            <span>Email</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="phone" class="mr-2 h-4 w-4"> 
+                            <span>Phone</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="date" class="mr-2 h-4 w-4"> 
+                            <span>Date</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Address Information -->
+                <div class="field-category mb-4">
+                    <div class="flex justify-between items-center mb-2 cursor-pointer category-header">
+                        <h2 class="text-md font-medium text-gray-700">Address Information</h2>
+                        <svg class="w-5 h-5 transform rotate-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="category-content grid grid-cols-2 gap-2">
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="address" class="mr-2 h-4 w-4"> 
+                            <span>Address</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="city" class="mr-2 h-4 w-4"> 
+                            <span>City</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="zip" class="mr-2 h-4 w-4"> 
+                            <span>Zip Code</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Other Fields -->
+                <div class="field-category mb-4">
+                    <div class="flex justify-between items-center mb-2 cursor-pointer category-header">
+                        <h2 class="text-md font-medium text-gray-700">Other Fields</h2>
+                        <svg class="w-5 h-5 transform rotate-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div class="category-content grid grid-cols-2 gap-2">
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="company" class="mr-2 h-4 w-4"> 
+                            <span>Company</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="number" class="mr-2 h-4 w-4"> 
+                            <span>Number</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="select" class="mr-2 h-4 w-4"> 
+                            <span>Dropdowns</span>
+                        </label>
+                        <label class="flex items-center p-2 rounded hover:bg-gray-50">
+                            <input type="checkbox" value="color" class="mr-2 h-4 w-4"> 
+                            <span>Colors</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Custom Tab -->
+            <div class="tab-content" id="custom-tab">
+                <h2 class="text-md font-medium text-gray-700 mb-3">Custom Fields</h2>
+                <p class="text-sm text-gray-600 mb-4">Create custom fields to match specific form elements on websites.</p>
+                
+                <div id="customFieldsContainer" class="space-y-3 mb-4">
+                    <!-- Default custom field -->
+                    <div class="custom-field-row flex items-center p-2 border border-gray-200 rounded">
+                        <input type="checkbox" value="custom" class="mr-2 h-4 w-4 custom-checkbox" checked> 
+                        <input type="text" placeholder="Field name" class="custom-field-name border border-gray-300 p-2 rounded mr-2 flex-grow text-sm">
+                        <select title="Field type" class="custom-field-type border border-gray-300 p-2 rounded text-sm">
+                            <option value="text">Text</option>
+                            <option value="number">Number</option>
+                            <option value="date">Date</option>
+                            <option value="name">Name</option>
+                            <option value="email">Email</option>
+                            <option value="color">Color</option>
+                        </select>
+                        <button title="Remove" class="remove-field ml-2 text-red-500 hover:text-red-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <button id="addCustomField" class="flex items-center justify-center w-full bg-gray-100 text-gray-700 py-2 px-4 rounded text-sm hover:bg-gray-200 transition duration-200">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                    Add Custom Field
+                </button>
+            </div>
+            
+            <!-- Settings Tab -->
+            <div class="tab-content" id="settings-tab">
+                <h2 class="text-md font-medium text-gray-700 mb-3">Settings</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-700">Trigger form events</span>
+                        <div class="relative inline-block w-10 mr-2 align-middle select-none">
+                            <input type="checkbox" id="triggerEvents" checked class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                            <label for="triggerEvents" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-700">Auto-fill required fields</span>
+                        <div class="relative inline-block w-10 mr-2 align-middle select-none">
+                            <input type="checkbox" id="fillRequired" checked class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                            <label for="fillRequired" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-700">Smart field detection</span>
+                        <div class="relative inline-block w-10 mr-2 align-middle select-none">
+                            <input type="checkbox" id="smartDetection" checked class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                            <label for="smartDetection" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer with action button -->
+        <div class="p-4 bg-gray-50 border-t">
+            <button id="autofill" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition duration-200 flex items-center justify-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Fill Form Data
+            </button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

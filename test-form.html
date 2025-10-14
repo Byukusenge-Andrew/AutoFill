@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFill Test Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c5282;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #f8fafc;
+        }
+        .form-section h2 {
+            margin-top: 0;
+            color: #4a5568;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .checkbox-label, .radio-label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+            font-weight: normal;
+        }
+        button {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #3182ce;
+        }
+        .required:after {
+            content: " *";
+            color: #e53e3e;
+        }
+        .form-note {
+            font-size: 14px;
+            color: #718096;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AutoFill Test Form</h1>
+    <p>This form contains various field types to test the AutoFill Dummy Data extension.</p>
+    
+    <form id="test-form">
+        <!-- Personal Information Section -->
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            
+            <div class="form-row">
+                <label for="firstName" class="required">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="lastName" class="required">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            
+            <div class="form-row">
+                <label for="email" class="required">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <div class="form-note">We'll never share your email with anyone else.</div>
+            </div>
+            
+            <div class="form-row">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+            </div>
+            
+            <div class="form-row">
+                <label for="birthdate">Date of Birth</label>
+                <input type="date" id="birthdate" name="birthdate">
+            </div>
+            
+            <div class="form-row">
+                <label>Gender</label>
+                <label class="radio-label">
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="gender" value="other"> Other
+                </label>
+            </div>
+        </div>
+        
+        <!-- Address Section -->
+        <div class="form-section">
+            <h2>Address Information</h2>
+            
+            <div class="form-row">
+                <label for="address">Street Address</label>
+                <input type="text" id="address" name="address">
+            </div>
+            
+            <div class="form-row">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+            </div>
+            
+            <div class="form-row">
+                <label for="state">State/Province</label>
+                <select id="state" name="state">
+                    <option value="">Select a state</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <!-- Add more states as needed -->
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label for="zipCode">Zip/Postal Code</label>
+                <input type="text" id="zipCode" name="zipCode">
+            </div>
+            
+            <div class="form-row">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AU">Australia</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+        </div>
+        
+        <!-- Employment Information -->
+        <div class="form-section">
+            <h2>Employment Information</h2>
+            
+            <div class="form-row">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company">
+            </div>
+            
+            <div class="form-row">
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle" name="jobTitle">
+            </div>
+            
+            <div class="form-row">
+                <label for="yearsExperience">Years of Experience</label>
+                <input type="number" id="yearsExperience" name="yearsExperience" min="0" max="50">
+            </div>
+            
+            <div class="form-row">
+                <label for="salary">Annual Salary</label>
+                <input type="number" id="salary" name="salary" placeholder="$">
+            </div>
+            
+            <div class="form-row">
+                <label for="department">Department</label>
+                <select id="department" name="department">
+                    <option value="">Select a department</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="sales">Sales</option>
+                    <option value="hr">Human Resources</option>
+                    <option value="finance">Finance</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Custom Fields for Testing -->
+        <div class="form-section">
+            <h2>Custom Fields</h2>
+            <p>These fields are for testing custom field detection.</p>
+            
+            <div class="form-row">
+                <label for="favoriteColor">Favorite Color</label>
+                <input type="text" id="favoriteColor" name="favoriteColor">
+            </div>
+            
+            <div class="form-row">
+                <label for="petName">Pet Name</label>
+                <input type="text" id="petName" name="petName">
+            </div>
+            
+            <div class="form-row">
+                <label for="accountNumber">Account Number</label>
+                <input type="text" id="accountNumber" name="accountNumber">
+            </div>
+            
+            <div class="form-row">
+                <label for="customDate">Important Date</label>
+                <input type="date" id="customDate" name="customDate">
+            </div>
+            
+            <div class="form-row">
+                <label for="customNumber">Lucky Number</label>
+                <input type="number" id="customNumber" name="customNumber">
+            </div>
+        </div>
+        
+        <!-- Additional Information -->
+        <div class="form-section">
+            <h2>Additional Information</h2>
+            
+            <div class="form-row">
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <label for="referral">How did you hear about us?</label>
+                <select id="referral" name="referral">
+                    <option value="">Please select</option>
+                    <option value="search">Search Engine</option>
+                    <option value="social">Social Media</option>
+                    <option value="friend">Friend Referral</option>
+                    <option value="ad">Advertisement</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter
+                </label>
+            </div>
+            
+            <div class="form-row">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="terms" value="accepted" required> I accept the terms and conditions
+                </label>
+            </div>
+        </div>
+        
+        <button type="submit">Submit Form</button>
+    </form>
+    
+    <script>
+        // Simple form validation
+        document.getElementById('test-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully! In a real application, this would be sent to a server.');
+        });
+    </script>
+</body>
+</html> 
